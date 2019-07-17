@@ -1,0 +1,93 @@
+{
+  "defaultData": {
+    "owner": "agrama",
+    "description": "This description is Legend, wait for it, Dary! Legendary!",
+    "hidden": false,
+    "timeout": 10,
+    "verdictMethod": "EXIT_CODE",
+    "requirements":[
+    {"name":"pool",
+    "value":"something"}
+    ],
+    "commandSequence": [
+      "%file% %parameterNameValuePairList%"
+    ],
+    "executionMessages": {
+      "ok": ".*verified.*",
+      "info": ".*DEBUG.*|.*INFO.*",
+      "warning": ".*WARNING.*",
+      "error": ".*ERROR.*|.*CRITICAL.*"
+    }
+  },
+  "fileSets": [
+    {
+      "fileNameMatch": ".*swissArmyKnife\\.py",
+      "description": "Python scripts",
+      "language": "python",
+      "parameters": [
+        {
+          "name": "time",
+          "type": "TEXT",
+          "value": "10",
+          "description": "Time to sleep"
+        },
+        {
+          "name": "env",
+          "type": "BOOLEAN",
+          "value": true,
+          "description": "Time to sleep"
+        }
+
+    ]
+    },
+    {
+      "fileNameMatch": ".*\\.py",
+      "description": "Python scripts",
+      "language": "python",
+      "parameters": [
+        {
+          "name": "param",
+          "type": "TEXT",
+          "value": "testParam",
+          "description": "parameter test"
+        }]
+    },
+    {
+      "fileNameMatch": ".*\\.sh",
+      "description": "Shell scripts",
+      "language": "bash",
+      "parameters": [
+        {
+          "name": "param",
+          "type": "TEXT",
+          "value": "testParam",
+          "description": "parameter test"
+        }]
+    },
+    {
+      "fileNameMatch": ".*\\.ps1",
+      "description": "Powershell script",
+      "language": "powershell",
+      "parameters": [
+        {
+          "name": "param1",
+          "type": "TEXT",
+          "value": "testParam",
+          "description": "parameter test"
+        }]
+    },
+    {
+      "fileNameMatch": ".*\\.bat",
+      "description": "Batch script",
+      "language": "batch",
+      "parameters": [
+        {
+          "name": "param1",
+          "type": "TEXT",
+          "value": "testParam",
+          "description": "parameter test"
+        }]
+    }
+
+  ]
+}
